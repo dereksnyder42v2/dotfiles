@@ -15,9 +15,15 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set title
+set smarttab
+set expandtab
 
-"filetype plugin on
-"autocmd FileType python setlocal indentkeys-=<:>
-"autocmd FileType python setlocal indentkeys-=:
-autocmd FileType python set expandtab
+filetype plugin indent on "??
+augroup python
+	autocmd!
+	"autocmd FileType python setlocal expandtab
+	"set modeline "??
+	set nosmartindent
+	set autoindent
+augroup end
 
